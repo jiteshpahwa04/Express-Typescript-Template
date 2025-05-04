@@ -1,9 +1,10 @@
 import express from "express";
 import { Express } from "express";
+import {serverConfig} from "./config";
 
 const app: Express = express();
 
-const PORT = 3000; // implicit type-def
+const PORT = serverConfig.PORT;
 
 app.get('/ping', (req, res)=>{
     res.send("Pong");
